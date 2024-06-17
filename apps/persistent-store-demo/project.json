@@ -1,0 +1,9 @@
+{
+  "name": "persistent-store-demo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/persistent-store-demo/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project persistent-store-demo --web",
+  "targets": {}
+}
