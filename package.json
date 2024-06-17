@@ -2,9 +2,19 @@
   "name": "@redux-persistent-store-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "clearNxCache": "tsc -p ./tools && node ./dist/out-tsc/tools/tools/generators/clearNxCache.js",
+    "clearViteCache": "tsc -p ./tools && node ./dist/out-tsc/tools/tools/generators/clearViteCache.js",
+    "dev": "nx run persistent-store-demo:serve",
+    "buildAll": "nx run-many --target=build",
+    "testAll": "nx run-many --target=test",
+    "lintAll": "nx run-many --target=lint --quiet"
+  },
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.20",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "tslib": "^2.3.0"
