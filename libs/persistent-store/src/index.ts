@@ -1,1 +1,1 @@
-export * from './lib/persistent-store';
+export * from './lib/index';

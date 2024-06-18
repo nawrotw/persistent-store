@@ -1,17 +1,16 @@
 import { Card, CardContent, Typography, CardActions, Button } from "@mui/material";
-import { useState } from "react";
 import { CardTitle } from "./CardTitle";
 import { CodeBlock } from "./CodeBlock";
 
-export const PrimitiveValues = () => {
+export interface PrimitiveValuesProps {
+  persistentCounter: number;
+  transientCounter: number;
+  incrementCounters: () => void;
+}
 
-  const [persistentCounter, setPersistentCounter] = useState(0);
-  const [transientCounter, setTransientCounter] = useState(0);
+export const PrimitiveValues = (props: PrimitiveValuesProps) => {
 
-  const incrementCounters = () => {
-    setPersistentCounter(persistentCounter + 1);
-    setTransientCounter(transientCounter + 1);
-  }
+  const { persistentCounter, transientCounter, incrementCounters } = props;
 
   return <Card sx={{ maxWidth: 345 }}>
     <CardTitle>Primitive value</CardTitle>
