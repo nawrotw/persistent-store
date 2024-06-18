@@ -1,11 +1,11 @@
-import { Paper, styled, Grid, createTheme, useMediaQuery, ThemeProvider, CssBaseline } from "@mui/material";
-import { PrimitiveValues } from "./components/PrimitiveValues";
-import { ComplexObjects } from "./components/ComplexObjects";
-import { useMemo } from "react";
+import { styled, Grid, createTheme, useMediaQuery, ThemeProvider, CssBaseline, } from '@mui/material';
+import { PrimitiveValues } from './components/PrimitiveValues';
+import { ComplexObjects } from './components/ComplexObjects';
+import { useMemo } from 'react';
 
 const Root = styled('div')`
   padding: ${({ theme }) => theme.spacing(1)};
-`
+`;
 
 export function App() {
 
@@ -17,7 +17,7 @@ export function App() {
           mode: prefersDarkMode ? 'dark' : 'light',
         },
       }),
-    [prefersDarkMode],
+    [prefersDarkMode]
   );
   return (
     <ThemeProvider theme={theme}>
