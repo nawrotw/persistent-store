@@ -8,6 +8,7 @@
     "dev": "nx run persistent-store-demo:serve",
     "buildAll": "nx run-many --target=build",
     "testAll": "nx run-many --target=test",
+    "coverageAll": "nx run-many --target=test --coverage",
     "lintAll": "nx run-many --target=lint --quiet"
   },
   "private": true,

@@ -58,6 +58,7 @@ export default defineConfig({
     coverage: {
       reportsDirectory: '../../coverage/libs/persistent-store',
       provider: 'v8',
+      exclude: ['src/index.ts', 'src/lib/index.ts'],
     },
   },
 });
