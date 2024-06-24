@@ -29,9 +29,9 @@ export default defineConfig({
     outDir: '../../dist/libs/persistent-store',
     emptyOutDir: true,
     reportCompressedSize: true,
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
+    // commonjsOptions: {
+    //   transformMixedEsModules: true,
+    // },
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
@@ -50,8 +50,7 @@ export default defineConfig({
   test: {
     watch: false,
     globals: true,
-    cacheDir: '../../node_modules/.vitest/libs/persistent-store',
-    environment: 'jsdom',
+    environment: 'happy-dom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
 
     reporters: ['default'],

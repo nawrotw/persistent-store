@@ -17,7 +17,7 @@ export default defineConfig({
     host: 'localhost',
   },
 
-  plugins: [react(), nxViteTsPaths()],
+  plugins: [react(), nxViteTsPaths({debug: false})],
 
   // Uncomment this if you are using workers.
   // worker: {
@@ -28,8 +28,25 @@ export default defineConfig({
     outDir: '../../dist/apps/persistent-store-demo',
     emptyOutDir: true,
     reportCompressedSize: true,
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
+    // commonjsOptions: {
+    //   transformMixedEsModules: true,
+    // },
   },
+
+  test: {
+    watch: false,
+    globals: true,
+    // environment: 'jsdom',
+    environment: 'happy-dom',
+    setupFiles: ['src/vitest-setup.ts'],
+
+    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+
+    reporters: ['default'],
+    coverage: {
+      reportsDirectory: '../../coverage/libs/persistent-store',
+      provider: 'v8',
+      exclude: ['src/index.ts', 'src/lib/index.ts'],
+    },
+  }
 });

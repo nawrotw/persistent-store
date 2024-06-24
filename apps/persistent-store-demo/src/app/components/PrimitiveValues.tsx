@@ -15,7 +15,7 @@ export const PrimitiveValues = (props: PrimitiveValuesProps) => {
   return <Card sx={{ maxWidth: 345 }}>
     <CardTitle>Primitive value</CardTitle>
     <CardContent>
-      <CodeBlock gutterBottom>
+      <CodeBlock gutterBottom data-testid="primitive-values">
         Persisted: {persistentCounter}<br/>
         Transient: {transientCounter}
       </CodeBlock>
